@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <!--Home-->
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home"/>
+
+        <!--Profile-->
+        <item android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile"/>
+
+        <!--History-->
+        <item android:id="@+id/nav_order_history"
+            android:icon="@drawable/ic_order_history"
+            android:title="Previous Orders"/>
+
+    </group>
+    <item android:title="Contact">
+        <menu>
+
+            <!--FAQ-->
+            <item android:id="@+id/nav_FAQ"
+                android:icon="@drawable/ic_faq"
+                android:title="FAQ"/>
+
+            <!--Contact-->
+            <item android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_contact"
+                android:title="Contact Us"/>
+
+
+        </menu>
+    </item>
+
+    <item android:title="User">
+        <menu>
+
+            <!--Sign Out-->
+            <item android:id="@+id/nav_signout"
+                android:icon="@drawable/ic_signout"
+                android:title="Sign Out"/>
+
+        </menu>
+    </item>
+
+    
+
+</menu>

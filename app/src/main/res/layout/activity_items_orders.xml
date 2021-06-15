@@ -1,0 +1,1265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+    tools:context=".ItemsOrders">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffb700"
+        app:titleTextColor="@color/black"
+        app:title="Restaurants" />
+
+<Button
+    android:id="@+id/proceedOrder"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:background="#000000"
+    android:text="Proceed Order"
+    android:textColor="#ffffff" />
+<ScrollView
+
+    android:layout_marginTop="56dp"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_above="@id/proceedOrder">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number1"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Paneer Masala" />
+
+                <TextView
+                    android:id="@+id/foodPrice1"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName1"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="120 Rs." />
+
+                <Button
+                    android:id="@+id/removeItem1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity1"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem1"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/addToOrder1"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/addToOrder1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem1"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Item2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number2"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="2"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Paneer Tikka" />
+
+                <TextView
+                    android:id="@+id/foodPrice2"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName2"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="125 Rs." />
+
+                <Button
+                    android:id="@+id/removeItem2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity2"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem2"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/addToOrder2"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/addToOrder2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem2"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Item3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number3"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="3"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName3"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Chana Masala" />
+
+                <TextView
+                    android:id="@+id/foodPrice3"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName3"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="80 Rs." />
+
+                <Button
+                    android:id="@+id/removeItem3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity3"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem3"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/addToOrder3"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/addToOrder3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem3"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Item4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number4"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="4"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName4"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Alu Mutter" />
+
+                <TextView
+                    android:id="@+id/foodPrice4"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName4"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="90 Rs." />
+
+                <Button
+                    android:id="@+id/removeItem4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity4"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem4"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/addToOrder4"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/addToOrder4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem4"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Item5"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number5"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="5"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName5"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Shev Bhaji" />
+
+                <TextView
+                    android:id="@+id/foodPrice5"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName5"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="60 Rs." />
+
+                <Button
+                    android:id="@+id/removeItem5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity5"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem5"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/addToOrder5"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/addToOrder5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem5"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Item6"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number6"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="6"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName6"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Bhindi Fry" />
+
+                <TextView
+                    android:id="@+id/foodPrice6"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName6"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="95 Rs." />
+
+                <Button
+                    android:id="@+id/removeItem6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity6"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem6"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/addToOrder6"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/addToOrder6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem6"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Item7"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number7"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="7"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName7"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Methi Masala" />
+
+                <TextView
+                    android:id="@+id/foodPrice7"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName7"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="80 Rs." />
+
+                <Button
+                    android:id="@+id/addToOrder7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity7"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem7"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/removeItem7"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/removeItem7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem7"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Item8"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number8"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="8"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName8"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Malai Kofta" />
+
+                <TextView
+                    android:id="@+id/foodPrice8"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName8"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="140 Rs." />
+
+                <Button
+                    android:id="@+id/addToOrder8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity8"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem8"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/removeItem8"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/removeItem8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem8"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Item9"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number9"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="9"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName9"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Dam Aloo" />
+
+                <TextView
+                    android:id="@+id/foodPrice9"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName9"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="95 Rs." />
+
+                <Button
+                    android:id="@+id/addToOrder9"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity9"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem9"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/removeItem9"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/removeItem9"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem9"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Item10"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number10"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="10"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName10"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Plain Rice" />
+
+                <TextView
+                    android:id="@+id/foodPrice10"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName10"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="60 Rs." />
+
+                <Button
+                    android:id="@+id/addToOrder10"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity10"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem10"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/removeItem10"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/removeItem10"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem10"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Item11"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number11"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="11"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName11"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Fried Rice" />
+
+                <TextView
+                    android:id="@+id/foodPrice11"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName11"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="80 Rs." />
+
+                <Button
+                    android:id="@+id/addToOrder11"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity11"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem11"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/removeItem11"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/removeItem11"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem11"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Item12"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number12"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="12"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName12"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Plain Roti" />
+
+                <TextView
+                    android:id="@+id/foodPrice12"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName12"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="10 Rs." />
+
+                <Button
+                    android:id="@+id/addToOrder12"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity12"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem12"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/removeItem12"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/removeItem12"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem12"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Item13"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number13"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="13"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName13"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Butter Roti" />
+
+                <TextView
+                    android:id="@+id/foodPrice13"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName13"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="15 Rs." />
+
+                <Button
+                    android:id="@+id/addToOrder13"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity13"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem13"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/removeItem13"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/removeItem13"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem13"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Item14"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number14"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="14"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName14"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Plain Papad" />
+
+                <TextView
+                    android:id="@+id/foodPrice14"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName14"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="5 Rs." />
+
+                <Button
+                    android:id="@+id/addToOrder14"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity14"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem14"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/removeItem14"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/removeItem14"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem14"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Item15"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/number15"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:text="15"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/text_container15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/foodName15"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:text="Masala Papad" />
+
+                <TextView
+                    android:id="@+id/foodPrice15"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/foodName15"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="10 Rs." />
+
+                <Button
+                    android:id="@+id/addToOrder15"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:layout_toLeftOf="@+id/foodQuantity15"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="removeItem15"
+                    />
+                <TextView
+                    android:id="@+id/foodQuantity15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/removeItem15"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/removeItem15"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:layout_marginRight="16dp"
+                    android:onClick="addItem15"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>
